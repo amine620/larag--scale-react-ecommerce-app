@@ -11,8 +11,9 @@ const initialState={
 
 function ContextProvider({children}) {
     const [activeMenu, setActiveMenu] = useState(true);
+    const [isClicked, setisClicked] = useState(initialState);
   return (
-    <StateContext.Provider value={{activeMenu,setActiveMenu}}>
+    <StateContext.Provider value={{activeMenu,setActiveMenu,isClicked,setisClicked}}>
         {children}
     </StateContext.Provider>
   )

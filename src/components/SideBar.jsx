@@ -18,12 +18,12 @@ function SideBar() {
        activeMenu && (
          <>
            <div className='flex justify-between items-center'>
-            <Link to={"/"} onClick={()=>{}} className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
+            <Link to={"/"} onClick={()=>setActiveMenu(false)} className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
                   <SiShopware className={"text-3xl"} />
                   <span>Shoppy</span>
             </Link>
             <TooltipComponent content={'Menu'} position="BottomCenter">
-              <button type='button' onClick={()=>{}} className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden">
+              <button type='button' onClick={()=>setActiveMenu(prev=>!prev)} className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden">
                 <MdOutlineCancel /> 
               </button>
             </TooltipComponent>
