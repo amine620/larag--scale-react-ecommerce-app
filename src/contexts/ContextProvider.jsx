@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState , useEffect , useLayoutEffect } from 'react'
 
 
 const StateContext = createContext()
@@ -10,14 +10,24 @@ const initialState = {
 }
 
 function ContextProvider({ children }) {
+
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setisClicked] = useState(initialState);
   const [screenSize, setScreenSize] = useState(initialState);
   const [currentColor, setCurrentColor] = useState('#03C9D7');
   const [currentMode, setCurrentMode] = useState('Light');
   const [themeSettings, setThemeSettings] = useState(false);
+  
 
+useLayoutEffect(()=>{
+   setCurrentColor(()=>{
+    return localStorage.getItem('colorMode') ?  localStorage.getItem('colorMode') : '#03C9D7'
+  })
+  setCurrentMode(()=>{
+    return localStorage.getItem('themeMode') ?  localStorage.getItem('themeMode') : 'Light'
 
+  })
+},[])
 
   const handleClick = (clicked) => {
     setisClicked({
