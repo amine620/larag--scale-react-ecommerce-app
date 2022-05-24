@@ -1,4 +1,6 @@
-import React, { createContext, useContext, useState , useEffect , useLayoutEffect } from 'react'
+import React, { createContext, useContext, useState , useEffect , useLayoutEffect , useReducer } from 'react'
+import {  } from 'react/cjs/react.production.min';
+import { reducer } from './Reducer';
 
 
 const StateContext = createContext()
@@ -11,9 +13,10 @@ const initialState = {
 
 function ContextProvider({ children }) {
 
+  const [isClicked, dispatch] = useReducer(reducer,initialState);
+  
   const [activeMenu, setActiveMenu] = useState(true);
-  const [isClicked, setisClicked] = useState(initialState);
-  const [screenSize, setScreenSize] = useState(initialState);
+  const [screenSize, setScreenSize] = useState("");
   const [currentColor, setCurrentColor] = useState('#03C9D7');
   const [currentMode, setCurrentMode] = useState('Light');
   const [themeSettings, setThemeSettings] = useState(false);
@@ -30,10 +33,10 @@ useLayoutEffect(()=>{
 },[])
 
   const handleClick = (clicked) => {
-    setisClicked({
-      ...initialState,
-      [clicked]: true
-    })
+    // setisClicked({
+    //   ...initialState,
+    //   [clicked]: true
+    // })
   }
 
   
@@ -59,14 +62,15 @@ useLayoutEffect(()=>{
       currentMode,
       themeSettings,
       setActiveMenu,
-      setisClicked,
+      // setisClicked,
       handleClick,
       setScreenSize,
       setCurrentColor,
       setCurrentMode,
       setThemeSettings,
       setColor,
-      setMode
+      setMode,
+      dispatch
     }}>
       {children}
     </StateContext.Provider>

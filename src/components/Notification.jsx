@@ -28,7 +28,7 @@ const Notification = () => {
           </div>
         ))}
         <div className="mt-5">
-          <Button color="white" bgColor={currentColor} text="See all notifications" borderRadius="10px" width="full" />
+          <Button color="white" bgColor={currentColor} text="See all notifications" borderRadius="10px" width="full" type='close_notification' />
         </div>
       </div>
     </div>

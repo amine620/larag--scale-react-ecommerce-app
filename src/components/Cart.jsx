@@ -60,6 +60,7 @@ const Cart = () => {
             text="Place Order"
             borderRadius="10px"
             width="full"
+            type="close_cart"
           />
         </div>
       </div>

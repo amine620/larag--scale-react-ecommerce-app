@@ -23,6 +23,7 @@ const Chat = () => {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
+          type='close_chat'
         />
       </div>
       <div className="mt-5 ">
