@@ -19,6 +19,7 @@ const UserProfile = () => {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
+          type='close_user'
         />
       </div>
       <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6">
@@ -58,7 +59,7 @@ const UserProfile = () => {
           text="Logout"
           borderRadius="10px"
           width="full"
-          type='close_user'
+      
         />
       </div>
     </div>

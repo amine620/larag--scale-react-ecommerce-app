@@ -20,6 +20,7 @@ const Cart = () => {
             bgHoverColor="light-gray"
             size="2xl"
             borderRadius="50%"
+            type="close_cart"
           />
         </div>
         {cartData?.map((item, index) => (
@@ -60,7 +61,6 @@ const Cart = () => {
             text="Place Order"
             borderRadius="10px"
             width="full"
-            type="close_cart"
           />
         </div>
       </div>
