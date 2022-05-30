@@ -8,6 +8,7 @@ import { useStateContext } from '../contexts/ContextProvider'
 
 function SideBar() {
   const {activeMenu,setActiveMenu,screenSize,currentColor}=useStateContext()
+
   const handleCloseSideBar=()=>{
     if(activeMenu && screenSize <= 900){
         setActiveMenu(false)
@@ -26,7 +27,7 @@ function SideBar() {
             <Link to={"/"} onClick={handleCloseSideBar} className='items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900'>
 
                   <SiShopware className={"text-3xl"} />
-                  <span>Shoppy</span>
+                  <span>Obitler Shop</span>
             </Link>
             <TooltipComponent content={'Menu'} position="BottomCenter">
               <button type='button' onClick={()=>setActiveMenu(prev=>!prev)} className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden">
