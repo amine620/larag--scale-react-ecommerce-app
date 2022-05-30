@@ -1,5 +1,9 @@
 # Build and Deploy a React Admin Dashboard App With Theming, Tables, Charts, Calendar, Kanban and More
-![Shoppy](https://i.ibb.co/W6g39w3/image.png)
+![plot](./images/Capture1.PNG)
+![plot](./images/Capture2.PNG)
+![plot](./images/Capture3.PNG)
+![plot](./images/Capture4.PNG)
+![plot](./images/Capture5.PNG)
 
 ## Introduction
 This is a code repository for the corresponding video tutorial.
